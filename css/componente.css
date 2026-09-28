@@ -1,0 +1,106 @@
+/* ---------- Estilos de la página de ejemplo ---------- */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #e9eef3;
+  color: #24303c;
+  text-align: center;
+  padding: 60px 16px;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.botones button {
+  padding: 12px 22px;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-comida { background: #a3213a; }
+.btn-fiesta { background: #2c4a6b; }
+.btn-zona   { background: #2e7d5b; }
+
+/* ---------- Estilos del modal ---------- */
+
+/* Fondo oscuro que tapa toda la pantalla */
+.modal-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 24, 32, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 9999;
+  animation: aparecer 0.2s ease;
+}
+
+/* Caja blanca del modal */
+.modal-caja {
+  --color-modal: #a3213a;   /* JS lo cambia con el parámetro color */
+  background: #fff;
+  width: 100%;
+  max-width: 380px;
+  padding: 28px 24px 22px;
+  border-radius: 12px;
+  border-top: 6px solid var(--color-modal);
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  animation: crecer 0.25s ease;
+}
+
+.modal-icono {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.modal-titulo {
+  margin: 12px 0 8px;
+  font-size: 22px;
+  color: #24303c;
+}
+
+.modal-mensaje {
+  margin: 0 0 20px;
+  color: #4a5866;
+  line-height: 1.5;
+}
+
+.modal-boton {
+  padding: 10px 28px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--color-modal);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal-boton:hover {
+  opacity: 0.85;
+}
+
+/* Animaciones */
+@keyframes aparecer {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes crecer {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}

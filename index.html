@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ventana modal reutilizable</title>
+  <link rel="stylesheet" href="css/componente.css">
+</head>
+<body>
+  <h1>Conoce Oaxaca</h1>
+  <p>Presiona un botón para abrir el modal.</p>
+
+  <div class="botones">
+    <!-- Mismo componente con distinto icono, título, mensaje, color y tiempo -->
+    <button class="btn-comida" onclick="mostrarModal('🌮', 'Gastronomía', 'El mole negro, las tlayudas y el mezcal hacen de Oaxaca la capital gastronómica de México.', '#a3213a')">Gastronomía</button>
+    <button class="btn-fiesta" onclick="mostrarModal('💃', 'Guelaguetza', 'Cada lunes a finales de julio, las ocho regiones de Oaxaca comparten sus danzas en el Cerro del Fortín.', '#2c4a6b')">Guelaguetza</button>
+    <button class="btn-zona" onclick="mostrarModal('🏛️', 'Monte Albán', 'Antigua ciudad zapoteca. Este mensaje se cierra solo en 5 segundos.', '#2e7d5b', 5)">Monte Albán</button>
+  </div>
+
+  <script src="js/componente.js"></script>
+</body>
+</html>
